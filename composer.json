@@ -1,0 +1,42 @@
+{
+    "name": "rindow/rindow-module-twig",
+    "type": "library",
+    "description": "Rindow compatible module for Twig",
+    "keywords": ["rindow","framework","web","view","template","twig"],
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": ">=5.3.3",
+        "twig/extensions": "1.*"
+    },
+    "require-dev": {
+        "twig/extensions": "1.*",
+        "rindow/rindow-stdlib": "*",
+        "rindow/rindow-container": "*",
+        "rindow/rindow-web-http": "*",
+        "rindow/rindow-web-router": "*",
+        "rindow/rindow-web-form": "*",
+        "rindow/rindow-web-mvc": "*"
+    },
+    "suggest": {
+        "rindow/rindow-web-mvc": "When using with rindow-web-mvc",
+        "rindow/rindow-web-form": "When using web-form extensions"
+    },
+    "autoload": {
+        "psr-0": {
+            "Rindow\\Module\\Twig\\": "src/"
+        }
+    },
+
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://rindow.github.io/rindow-packagist/packages.json",
+            "options": {
+                "ssl": {
+                    "verify_peer": "true"
+                }
+            }
+        }
+    ],
+    "minimum-stability": "dev"
+}

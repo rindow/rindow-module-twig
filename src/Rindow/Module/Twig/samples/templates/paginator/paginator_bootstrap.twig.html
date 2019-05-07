@@ -1,0 +1,28 @@
+{% macro rendering(paginator, route, max= 5, scrolling = 'jumping', range = 5) %}
+{% set dummy = paginator.setItemMaxPerPage(max) %}
+{% set dummy = paginator.setPageScrollingStyle(scrolling) %}
+{% set dummy = paginator.setPageRangeSize(range) %}
+<div>
+<ul class="pagination">
+	<li{{ paginator.hasPreviousPage() ? '' : ' class="disabled"' }}>
+		<a href="{{ url( route, { page: paginator.getPreviousPage() } ) }}">
+			&laquo; Previous
+		</a>
+	</li>
+	<li class="disabled"><a href="">&hellip;</a></li>
+{% for page in paginator.getPagesInRange() %}
+	<li{{ paginator.getPage() == page ? ' class="active"' : '' }}>
+		<a href="{{ url( route, { page: page }) }}">
+			{{ page }}
+		</a>
+	</li>
+{% endfor %}
+	<li class="disabled"><a href="">&hellip;</a></li>
+	<li{{ paginator.hasNextPage() ? '' : ' class="disabled"' }}>
+		<a href="{{ url( route, { page: paginator.getNextPage() } ) }}">
+			Next &raquo;
+		</a>
+	</li>
+</ul>
+</div>
+{% endmacro %}
