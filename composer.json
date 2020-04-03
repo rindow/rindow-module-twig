@@ -10,12 +10,12 @@
     },
     "require-dev": {
         "twig/extensions": "1.*",
-        "rindow/rindow-stdlib": "*",
-        "rindow/rindow-container": "*",
-        "rindow/rindow-web-http": "*",
-        "rindow/rindow-web-router": "*",
-        "rindow/rindow-web-form": "*",
-        "rindow/rindow-web-mvc": "*"
+        "rindow/rindow-stdlib": "1.*",
+        "rindow/rindow-container": "1.*",
+        "rindow/rindow-web-http": "1.*",
+        "rindow/rindow-web-router": "1.*",
+        "rindow/rindow-web-form": "1.*",
+        "rindow/rindow-web-mvc": "1.*"
     },
     "suggest": {
         "rindow/rindow-web-mvc": "When using with rindow-web-mvc",
@@ -25,18 +25,5 @@
         "psr-0": {
             "Rindow\\Module\\Twig\\": "src/"
         }
-    },
-
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://rindow.github.io/rindow-packagist/packages.json",
-            "options": {
-                "ssl": {
-                    "verify_peer": "true"
-                }
-            }
-        }
-    ],
-    "minimum-stability": "dev"
+    }
 }
