@@ -44,6 +44,10 @@ class Module
                     'Form' => 'Rindow\\Module\\Twig\\Extension\\DefaultForm',
                     'Url' => 'Rindow\\Module\\Twig\\Extension\\DefaultUrl',
                 ),
+                'templateCache' => true,
+                //  The default is obtained from ConfigCacheFactory->getFileCache->getPath().
+                //  If you want to specify it explicitly, write the following.
+                // 'templateCacheDir' => '/tmp/cache/twig';
             ),
         );
     }
